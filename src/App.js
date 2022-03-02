@@ -14,13 +14,16 @@ export default function App() {
         <Link to="/page1">Page1</Link>
         <br />
         <Link to="/page2">Page2</Link>
-        <Home />
-
-        <Page2 />
       </div>
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/page1">
           <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
         </Route>
       </Switch>
     </BrowserRouter>
