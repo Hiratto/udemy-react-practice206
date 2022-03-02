@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
 import { Home } from "./Home";
 import { Page1 } from "./Page1";
@@ -15,9 +15,14 @@ export default function App() {
         <br />
         <Link to="/page2">Page2</Link>
         <Home />
-        <Page1 />
+
         <Page2 />
       </div>
+      <Switch>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 }
